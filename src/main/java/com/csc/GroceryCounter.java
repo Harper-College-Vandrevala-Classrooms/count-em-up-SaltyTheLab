@@ -11,20 +11,20 @@ public class GroceryCounter {
   int overflow = 0;
 
   GroceryCounter() {
-    // System.out.println("enter your starting value:");
-    // this.ten = input.nextInt();
-    // this.one = input.nextInt();
-    // this.tenths = input.nextInt();
-    // this.hundreths = input.nextInt();
-    // while (this.ten < 0 || this.ten > 9 || this.one < 0 || this.one > 9 ||
-    // this.tenths < 0 || this.tenths > 9
-    // || this.hundreths < 0 || this.hundreths > 9) {
-    // System.out.print("invalid starting number. Please renter:");
-    // this.ten = input.nextInt();
-    // this.one = input.nextInt();
-    // this.tenths = input.nextInt();
-    // this.hundreths = input.nextInt();
-    // }
+    System.out.println("enter your starting value with spaces:");
+    this.ten = input.nextInt();
+    this.one = input.nextInt();
+    this.tenths = input.nextInt();
+    this.hundreths = input.nextInt();
+    while (this.ten < 0 || this.ten > 9 || this.one < 0 || this.one > 9 ||
+        this.tenths < 0 || this.tenths > 9
+        || this.hundreths < 0 || this.hundreths > 9) {
+      System.out.print("invalid starting number. Please renter:");
+      this.ten = input.nextInt();
+      this.one = input.nextInt();
+      this.tenths = input.nextInt();
+      this.hundreths = input.nextInt();
+    }
   };
 
   public void ten() {
@@ -109,9 +109,16 @@ public class GroceryCounter {
   }
 
   public static void main(String[] args) {
-    System.out.print("enter your starting value:");
     GroceryCounter bob = new GroceryCounter();
-    System.out.print(bob.number_of_overflows());
+    bob.tenths();
+    bob.tenths();
+    bob.tenths();
+    bob.tenths();
+    bob.tenths();
     System.out.print(bob.total());
+    for (int i = 0; i < 100; i++)
+      bob.ones();
+    bob.clear();
+    bob.total();
   }
 }

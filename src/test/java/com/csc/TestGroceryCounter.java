@@ -22,9 +22,9 @@ public class TestGroceryCounter {
 
   @Test
   void tenincrementwithoverflow() {
-    for (int i = 0; i < 100; i++)
-      counter.ten();
-    assertEquals(10, counter.number_of_overflows());
+    for (int i = 0; i < 30000; i++)
+      counter.hundreths();
+    assertEquals(3, counter.number_of_overflows());
   }
 
   @Test
